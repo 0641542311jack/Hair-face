@@ -5,6 +5,7 @@ import 'package:barberapp/pages/forgot_password.dart';
 import 'package:barberapp/pages/hair.dart';
 import 'package:barberapp/pages/home.dart';
 import 'package:barberapp/pages/login.dart';
+import 'package:barberapp/pages/myface.dart';
 import 'package:barberapp/pages/onboarding.dart';
 import 'package:barberapp/pages/signup.dart';
 import 'package:firebase_core/firebase_core.dart';

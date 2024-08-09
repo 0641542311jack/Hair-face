@@ -29,7 +29,7 @@ class _HairState extends State<Hair> {
               SizedBox(
                 height: 10,
               ),
-              Image.asset("images/towblock.png"),
+              Image.asset("images/hair_towblock.png"),
               SizedBox(
                 height: 10,
               ),
@@ -86,7 +86,7 @@ class _HairState extends State<Hair> {
               SizedBox(
                 height: 20,
               ),
-              Image.asset("images/Undercut.png"),
+              Image.asset("images/hair_Undercut.png"),
               SizedBox(
                 height: 10,
               ),
@@ -134,7 +134,124 @@ class _HairState extends State<Hair> {
               ),
               Text(
                   "เหมาะมากเป็นพิเศษสำหรับผู้ชายหน้าอ้วนที่ต้องการให้ใบหน้าดูเล็กและเรียวยาว นั่นเพราะอันเดอร์คัตจะใช้เทคนิคการไถผมด้านข้างให้สั้น ซึ่งส่วนนี้เองที่ไปลดความกว้างของใบหน้าได้เป็นอย่างดี ในขณะที่ผมด้านบนที่ไว้ความยาว ก็สามารถจัดแต่งทรงได้ตามใจชอบ",
-                  style: TextStyle(fontSize: 13))
+                  style: TextStyle(fontSize: 13)),
+              SizedBox(
+                height: 20,
+              ),
+              Divider(
+                color: Colors.black, //เส้น
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Image.asset("images/hair_skinhead.png"),
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Text(
+                  "3.ทรง Skinhead",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 18,
+                      color: Color.fromARGB(255, 2, 5, 96)),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                  "สกินเฮด (Skinhead) เป็นทรงผมสั้นชายที่มีลักษณะสั้นเกรียนติดหนังหัว โดยใช้ปัตตาเลียนไถผมให้สั้นเท่ากันทั้งศีรษะ ประวัติของผมทรงสกินเฮดเริ่มทำกันครั้งแรกในช่วงยุคปลาย 60s ในประเทศอังกฤษและ ยังเป็นทรงหัวเกรียนยอดนิยมตั้งแต่นั้นมา ต่อมาสกินเฮดเริ่มได้รับความนิยมมากขึ้นซึ่งทำกันในหมู่อาชีพทหาร โดยแพร่หลายมายังยุโรป อเมริกาและเอเชีย ซึ่งในปัจจุบันสกินเฮดก็ได้กลายเป็นแฟชั่นทรงผมสไตล์หนึ่ง และมีการปรับรูปแบบให้มีความหลากหลายมากขึ้น",
+                  style: TextStyle(fontSize: 13)),
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Text(
+                  "ข้อดีของทรง Skinhead ",
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: const Color.fromARGB(255, 2, 5, 96)),
+                ),
+              ),
+              Text(
+                  "ผมทรงสกินเฮดนั้น เป็นทรงที่แทบไม่ต้องเซ็ตเลย เพราะความที่ผมสั้นจนเกือบติดหนังศีรษะ ดังนั้นการดูแลหนังศีรษะให้สะอาดและปราศจากรังแคจึงเป็นเรื่องสำคัญที่สุด",
+                  style: TextStyle(fontSize: 13)),
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Text(
+                  "ทรง Skinhead เหมาะกับใคร?",
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: const Color.fromARGB(255, 2, 5, 96)),
+                ),
+              ),
+              Text("เหมาะกับคนที่ทรงหน้ารูปไข่",
+                  style: TextStyle(fontSize: 13)),
+              SizedBox(
+                height: 20,
+              ),
+              Divider(
+                color: Colors.black, //เส้น
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Image.asset("images/hair_longshong.png"),
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Text(
+                  "4.ทรง รองทรง",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 18,
+                      color: Color.fromARGB(255, 2, 5, 96)),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                  "ทรงผมรองทรง จะเป็นรองทรงสูงรองทรงกลางหรือรองทรงต่ำ ถือเป็นทรงผมชายมาตรฐานที่ชายไทยทุกคนคุ้นเคยกันดี และคงเคยตัดกันมาแล้วอย่างแน่นอน ทรงผมรองทรง ยังติดเทรนด์ผมของผู้ชายมาตลอดความแตกต่างระหว่างทรงผมรองทรงแต่ละแบบขึ้นอยู่กับลักษณะของการสร้างแนวผม โดยรองทรงสูงจะขึ้นแบบให้ฐานค่อนข้างสูงหรืออยู่ระดับเหนือขมับส่วนทรงผมรองทรงกลางจะขึ้นแบบให้ฐานอยู่ระดับใบหู และทรงผมรองทรงต่ำจะขึ้นแบบให้ฐานอยู่ค่อนข้างต่ำ หรือ ระดับต่ำกว่าติ่งหูลงมา ทั้งนี้การเลือกตัดทรงผมรองทรงแต่ละแบบก็ขึ้นอยู่กับสาขาอาชีพ ความเหมาะสม และ ควรคำนึงถืงรูปศีรษะของเราด้วย เพื่อให้ทรงผมออกมาดูดี และรับกับใบหน้ามากที่สุด",
+                  style: TextStyle(fontSize: 13)),
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Text(
+                  "ข้อดีของทรง รองทรง ",
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: const Color.fromARGB(255, 2, 5, 96)),
+                ),
+              ),
+              Text(
+                  "รองทรงเป็นทรงฮิตที่นอกจากจะดูแลง่ายและยังเหมาะกับสภาพอากาศหลายๆแบบ ยังมีลูกเล่นสำหรับคนที่ตัดได้แต่งผมให้ดูดีอีกด้วย ",
+                  style: TextStyle(fontSize: 13)),
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Text(
+                  "ทรง รองทรง เหมาะกับใคร?",
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: const Color.fromARGB(255, 2, 5, 96)),
+                ),
+              ),
+              Text("เหมาะกับคนหน้ายาว\nโดยผมจะไปลดความยาวช่วงหน้าผาก",
+                  style: TextStyle(fontSize: 13)),
+              Divider(
+                color: Colors.black, //เส้น
+              ),
             ],
           ),
         ),
