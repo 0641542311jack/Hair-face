@@ -19,14 +19,14 @@ resetPassword()async{
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(
           "Password Reset Email has been sent!",
-          style: TextStyle(fontSize: 20.0),
+          style: TextStyle(fontSize: 20),
         )));
   } on FirebaseAuthException catch(e){
     if(e.code=="user-not-found"){
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(
           "No user found for the email.",
-          style: TextStyle(fontSize: 20.0),
+          style: TextStyle(fontSize: 20),
         )));
     }
   }
@@ -41,7 +41,7 @@ resetPassword()async{
         child: Column(
           children: [
             SizedBox(
-              height: 70.0,
+              height: 70,
             ),
             Container(
               alignment: Alignment.topCenter,
@@ -49,7 +49,7 @@ resetPassword()async{
                 "Password Recovery",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 30.0,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -60,19 +60,19 @@ resetPassword()async{
               "Enter your mail",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 30.0,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 30.0,
+              height: 30,
             ),
             Form(
               key: _formkey,
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 20.0),
-                padding: EdgeInsets.only(left: 10.0),
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.only(left: 10),
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white70, width: 2.0),
+                    border: Border.all(color: Colors.white70, width: 2),
                     borderRadius: BorderRadius.circular(30)),
                 child: TextFormField(
                   controller: mailcontroller,
@@ -86,17 +86,17 @@ resetPassword()async{
                   decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "Email",
-                      hintStyle: TextStyle(fontSize: 18.0, color: Colors.white),
+                      hintStyle: TextStyle(fontSize: 18, color: Colors.white),
                       prefixIcon: Icon(
                         Icons.mail_outline,
                         color: Colors.white60,
-                        size: 30.0,
+                        size: 30,
                       )),
                 ),
               ),
             ),
             SizedBox(
-              height: 50.0,
+              height: 50,
             ),
             GestureDetector(
               onTap: () async {
@@ -116,7 +116,7 @@ resetPassword()async{
                   "Send Email",
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20.0,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
               ),

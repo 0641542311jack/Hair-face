@@ -63,7 +63,7 @@ class _BookingState extends State<Booking> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 4, 37, 72),
       body: Container(
-        margin: EdgeInsets.only(left: 5,right: 5),
+        margin: EdgeInsets.only(left: 5, right: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -86,7 +86,7 @@ class _BookingState extends State<Booking> {
             Text(
               "เลือกการจองของคุณ",
               style: TextStyle(
-                  color: const Color.fromARGB(179, 255, 255, 255),
+                  color: Color.fromARGB(255, 255, 255, 255),
                   fontSize: 28.0,
                   fontWeight: FontWeight.bold),
             ),
@@ -115,8 +115,16 @@ class _BookingState extends State<Booking> {
             Container(
               padding: EdgeInsets.only(top: 2, bottom: 2),
               decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 148, 7, 0),
-                  borderRadius: BorderRadius.circular(20)),
+                  color: Color.fromARGB(255, 50, 83, 125),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.6), // สีของเงา
+                      spreadRadius: 5, // การกระจายของเงา
+                      blurRadius: 20, // การเบลอของเงา
+                      offset: Offset(0, 3), // ตำแหน่งของเงา
+                    )
+                  ]),
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
@@ -159,13 +167,21 @@ class _BookingState extends State<Booking> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 15,
             ),
             Container(
               padding: EdgeInsets.only(top: 2, bottom: 2),
               decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 0, 255, 72),
-                  borderRadius: BorderRadius.circular(20)),
+                  color: Color.fromARGB(255, 50, 83, 125),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.6), // สีของเงา
+                      spreadRadius: 5, // การกระจายของเงา
+                      blurRadius: 20, // การเบลอของเงา
+                      offset: Offset(0, 3), // ตำแหน่งของเงา
+                    )
+                  ]),
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
@@ -208,7 +224,7 @@ class _BookingState extends State<Booking> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 40,
             ),
             GestureDetector(
               onTap: () async {
@@ -237,10 +253,18 @@ class _BookingState extends State<Booking> {
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                 decoration: BoxDecoration(
                     color: Color(0xFFfe8f33),
-                    borderRadius: BorderRadius.circular(20)),
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.6), // สีของเงา
+                        spreadRadius: 5, // การกระจายของเงา
+                        blurRadius: 20, // การเบลอของเงา
+                        offset: Offset(0, 3), // ตำแหน่งของเงา
+                      )
+                    ]),
                 child: Center(
                   child: Text(
-                    "BOOK NOW",
+                    "ยืนยัน",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 22,

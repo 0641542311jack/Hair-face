@@ -1,4 +1,4 @@
-import 'package:barberapp/pages/Shopbooking.dart';
+
 import 'package:barberapp/pages/booking.dart';
 import 'package:barberapp/pages/booking_user.dart';
 import 'package:barberapp/pages/hair.dart';
@@ -51,14 +51,14 @@ class _HomeState extends State<Home> {
                       "Hello",
                       style: TextStyle(
                           color: Color.fromARGB(197, 255, 255, 255),
-                          fontSize: 24.0,
+                          fontSize: 24,
                           fontWeight: FontWeight.w500),
                     ),
                     Text(
-                      name ?? 'Guest', // ใช้ค่าเริ่มต้นถ้า name เป็น null
+                      name ?? 'Guest',
                       style: TextStyle(
                           color: Color.fromARGB(197, 255, 255, 255),
-                          fontSize: 24.0,
+                          fontSize: 24,
                           fontWeight: FontWeight.w500),
                     ),
                   ],
@@ -76,7 +76,9 @@ class _HomeState extends State<Home> {
                           height: 60,
                           width: 60,
                           color: Colors.grey,
-                          child: Icon(Icons.person, color: Colors.white), // ใช้ไอคอนหาก image เป็น null
+                          child: Icon(Icons.person,
+                              color:
+                                  Colors.white), // ใช้ไอคอนหาก image เป็น null
                         ),
                 ),
               ],
@@ -88,7 +90,7 @@ class _HomeState extends State<Home> {
               "Services",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24.0,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 5),
@@ -108,15 +110,23 @@ class _HomeState extends State<Home> {
                       height: 130,
                       width: 150,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 0, 0, 0),
-                          borderRadius: BorderRadius.circular(20)),
+                          color: Color.fromARGB(255, 50, 83, 125),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.6), // สีของเงา
+                              spreadRadius: 5, // การกระจายของเงา
+                              blurRadius: 20, // การเบลอของเงา
+                              offset: Offset(0, 3), // ตำแหน่งของเงา
+                            )
+                          ]),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "images/shaving.png",
+                            "images/hair1.png",
                             height: 80,
-                            width: 80,
+                            width: 135,
                             fit: BoxFit.cover,
                           ),
                           SizedBox(height: 1),
@@ -124,7 +134,7 @@ class _HomeState extends State<Home> {
                             "แนะนำทรงผม",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18.0,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -132,7 +142,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                SizedBox(width: 20.0),
+                SizedBox(width: 20),
                 Flexible(
                   fit: FlexFit.tight,
                   child: GestureDetector(
@@ -147,15 +157,23 @@ class _HomeState extends State<Home> {
                       height: 130,
                       width: 150,
                       decoration: BoxDecoration(
-                          color: Color(0xFFe29452),
-                          borderRadius: BorderRadius.circular(20)),
+                          color: Color.fromARGB(255, 50, 83, 125),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.6), // สีของเงา
+                              spreadRadius: 5, // การกระจายของเงา
+                              blurRadius: 20, // การเบลอของเงา
+                              offset: Offset(0, 3), // ตำแหน่งของเงา
+                            )
+                          ]),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "images/hair.png",
+                            "images/face.png",
                             height: 80,
-                            width: 80,
+                            width: 100,
                             fit: BoxFit.cover,
                           ),
                           SizedBox(height: 1),
@@ -163,7 +181,7 @@ class _HomeState extends State<Home> {
                             "แนะนำโครงหน้า",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18.0,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -173,7 +191,7 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            SizedBox(height: 30.0),
+            SizedBox(height: 30),
             Row(
               children: [
                 Flexible(
@@ -190,15 +208,23 @@ class _HomeState extends State<Home> {
                       height: 130,
                       width: 150,
                       decoration: BoxDecoration(
-                          color: Color(0xFFe29452),
-                          borderRadius: BorderRadius.circular(20)),
+                          color: Color.fromARGB(255, 50, 83, 125),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.6), // สีของเงา
+                              spreadRadius: 5, // การกระจายของเงา
+                              blurRadius: 20, // การเบลอของเงา
+                              offset: Offset(0, 3), // ตำแหน่งของเงา
+                            )
+                          ]),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "images/cutting.png",
+                            "images/hair_cutting.png",
                             height: 80,
-                            width: 80,
+                            width: 95,
                             fit: BoxFit.cover,
                           ),
                           SizedBox(height: 1),
@@ -206,7 +232,7 @@ class _HomeState extends State<Home> {
                             "จองตัดผม",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18.0,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -229,13 +255,21 @@ class _HomeState extends State<Home> {
                       height: 130,
                       width: 150,
                       decoration: BoxDecoration(
-                          color: Color(0xFFe29452),
-                          borderRadius: BorderRadius.circular(20)),
+                          color: Color.fromARGB(255, 50, 83, 125),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.6), // สีของเงา
+                              spreadRadius: 5, // การกระจายของเงา
+                              blurRadius: 20, // การเบลอของเงา
+                              offset: Offset(0, 3), // ตำแหน่งของเงา
+                            )
+                          ]),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "images/hair.png",
+                            "images/hair_washing.png",
                             height: 80,
                             width: 80,
                             fit: BoxFit.cover,
@@ -245,7 +279,7 @@ class _HomeState extends State<Home> {
                             "จองสระผม",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18.0,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -255,7 +289,7 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            SizedBox(height: 30.0),
+            SizedBox(height: 30),
             Row(
               children: [
                 Flexible(
@@ -272,15 +306,23 @@ class _HomeState extends State<Home> {
                       height: 130,
                       width: 150,
                       decoration: BoxDecoration(
-                          color: Color(0xFFe29452),
-                          borderRadius: BorderRadius.circular(20)),
+                          color: Color.fromARGB(255, 50, 83, 125),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.6), // สีของเงา
+                              spreadRadius: 5, // การกระจายของเงา
+                              blurRadius: 20, // การเบลอของเงา
+                              offset: Offset(0, 3), // ตำแหน่งของเงา
+                            )
+                          ]),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "images/kids.png",
+                            "images/booking.png",
                             height: 80,
-                            width: 80,
+                            width: 110,
                             fit: BoxFit.cover,
                           ),
                           SizedBox(height: 1),
@@ -288,7 +330,7 @@ class _HomeState extends State<Home> {
                             "การจองของฉัน",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18.0,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -296,30 +338,38 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                SizedBox(width: 20.0),
+                SizedBox(width: 20),
                 Flexible(
                   fit: FlexFit.tight,
                   child: Container(
                     height: 130,
                     width: 150,
                     decoration: BoxDecoration(
-                        color: Color(0xFFe29452),
-                        borderRadius: BorderRadius.circular(20)),
+                        color: Color.fromARGB(255, 50, 83, 125),
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.6), // สีของเงา
+                            spreadRadius: 5, // การกระจายของเงา
+                            blurRadius: 20, // การเบลอของเงา
+                            offset: Offset(0, 3), // ตำแหน่งของเงา
+                          )
+                        ]),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "images/kids.png",
+                          "images/map.png",
                           height: 80,
                           width: 80,
                           fit: BoxFit.cover,
                         ),
                         SizedBox(height: 1),
                         Text(
-                          "เส้นทางร้านตัดผม",
+                          "เส้นทางร้าน",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 18.0,
+                              fontSize: 18,
                               fontWeight: FontWeight.bold),
                         ),
                       ],

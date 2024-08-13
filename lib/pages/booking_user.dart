@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class Bookinf_User extends StatefulWidget {
-   String service;
+  String service;
   Bookinf_User({required this.service});
 
   @override
@@ -37,16 +37,15 @@ class _Bookinf_UserState extends State<Bookinf_User> {
                   itemBuilder: (context, index) {
                     DocumentSnapshot ds = snapshot.data.docs[index];
                     return Material(
-                      elevation: 8.0,
+                      elevation: 8,
                       borderRadius: BorderRadius.circular(20),
                       child: Container(
                         padding: EdgeInsets.all(10),
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(colors: [
-                            Color(0xFFB91635),
-                            Color(0Xff621d3c),
-                            Color(0xFF311937)
+                            Color.fromARGB(255, 4, 37, 72),
+                            Color.fromARGB(255, 45, 84, 135),
                           ]),
                           borderRadius: BorderRadius.circular(20),
                         ),
@@ -67,47 +66,47 @@ class _Bookinf_UserState extends State<Bookinf_User> {
                               ],
                             ),
                             SizedBox(
-                              height: 10.0,
+                              height: 10,
                             ),
                             Text(
                               "Service :   " + ds["Service"],
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20.0,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
-                              height: 5.0,
+                              height: 5,
                             ),
                             Text(
                               "Name :   " + ds["Username"],
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20.0,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
-                              height: 5.0,
+                              height: 5,
                             ),
                             Text(
                               "Date :   " + ds["Date"],
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20.0,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
-                              height: 5.0,
+                              height: 5,
                             ),
                             Text(
                               "Time :   " + ds["Time"],
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20.0,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
-                              height: 20.0,
+                              height: 20,
                             ),
                             GestureDetector(
                               onTap: () async {
@@ -119,16 +118,16 @@ class _Bookinf_UserState extends State<Bookinf_User> {
                                     color: Color(0xFFdf711a),
                                     borderRadius: BorderRadius.circular(10)),
                                 child: Text(
-                                  "Done",
+                                  "ยกเลิก",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 20.0,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
                             SizedBox(
-                              height: 20.0,
+                              height: 20,
                             ),
                           ],
                         ),
@@ -142,8 +141,9 @@ class _Bookinf_UserState extends State<Bookinf_User> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Container(
-        margin: EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
+        margin: EdgeInsets.only(top: 10, left: 20, right: 20),
         child: Column(
           children: [
             Center(
@@ -151,11 +151,11 @@ class _Bookinf_UserState extends State<Bookinf_User> {
               "All Bookings",
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 24.0,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold),
             )),
             SizedBox(
-              height: 30.0,
+              height: 30,
             ),
             Expanded(child: allBookings()),
           ],

@@ -1,3 +1,4 @@
+import 'package:barberapp/pages/forgot_password.dart';
 import 'package:barberapp/pages/home.dart';
 import 'package:barberapp/pages/signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -28,13 +29,13 @@ class _LogInState extends State<LogIn> {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(
           "No user Found for that Email",
-          style: TextStyle(fontSize: 18.0, color: Colors.black),
+          style: TextStyle(fontSize: 18, color: Colors.black),
         )));
       } else if (e.code == 'wrong-password') {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(
           "Wrong Password Provided by User",
-          style: TextStyle(fontSize: 18.0, color: Colors.black),
+          style: TextStyle(fontSize: 18, color: Colors.black),
         )));
       }
     }
@@ -48,8 +49,8 @@ class _LogInState extends State<LogIn> {
           children: [
             Container(
               padding: EdgeInsets.only(
-                top: 50.0,
-                left: 30.0,
+                top: 50,
+                left: 30,
               ),
               height: MediaQuery.of(context).size.height / 2,
               width: MediaQuery.of(context).size.width,
@@ -57,19 +58,18 @@ class _LogInState extends State<LogIn> {
                   gradient: LinearGradient(colors: [
                 Color.fromARGB(255, 4, 37, 72),
                 Color.fromARGB(255, 11, 52, 96),
-               
               ])),
               child: Text(
                 "Hello\nSign in!",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 32.0,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold),
               ),
             ),
             Container(
-              padding: EdgeInsets.only(
-                  top: 40.0, left: 30.0, right: 30.0, bottom: 30.0),
+              padding:
+                  EdgeInsets.only(top: 40, left: 30, right: 30, bottom: 30),
               margin:
                   EdgeInsets.only(top: MediaQuery.of(context).size.height / 4),
               height: MediaQuery.of(context).size.height,
@@ -88,7 +88,7 @@ class _LogInState extends State<LogIn> {
                       "Gmail",
                       style: TextStyle(
                           color: Color.fromARGB(255, 4, 37, 72),
-                          fontSize: 23.0,
+                          fontSize: 23,
                           fontWeight: FontWeight.w500),
                     ),
                     TextFormField(
@@ -104,13 +104,13 @@ class _LogInState extends State<LogIn> {
                           prefixIcon: Icon(Icons.mail_outline)),
                     ),
                     SizedBox(
-                      height: 40.0,
+                      height: 40,
                     ),
                     Text(
                       "Password",
                       style: TextStyle(
                           color: Color.fromARGB(255, 4, 37, 72),
-                          fontSize: 23.0,
+                          fontSize: 23,
                           fontWeight: FontWeight.w500),
                     ),
                     TextFormField(
@@ -130,48 +130,43 @@ class _LogInState extends State<LogIn> {
                     SizedBox(
                       height: 15,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          "Forgot Password?",
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 11, 52, 96),
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ],
-                    ),
                     SizedBox(
                       height: 5,
                     ),
                     GestureDetector(
-                      onTap: (){
-                         if(_formkey.currentState!.validate()){
-                        setState(() {
-                          mail= emailcontroller.text;
-                          password= passwordcontroller.text;
-                          
-                        });
-                        userLogin();
-                      }
+                      onTap: () {
+                        if (_formkey.currentState!.validate()) {
+                          setState(() {
+                            mail = emailcontroller.text;
+                            password = passwordcontroller.text;
+                          });
+                          userLogin();
+                        }
                       },
                       child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 10.0),
+                        padding: EdgeInsets.symmetric(vertical: 10),
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                             gradient: LinearGradient(colors: [
                               Color.fromARGB(255, 4, 37, 72),
                               Color.fromARGB(255, 11, 52, 96),
-                              
                             ]),
-                            borderRadius: BorderRadius.circular(30)),
+                            borderRadius: BorderRadius.circular(30),
+                            boxShadow: [
+                              BoxShadow(
+                                color:
+                                    Colors.black.withOpacity(0.7), // สีของเงา
+                                spreadRadius: 2, // การกระจายของเงา
+                                blurRadius: 6, // การเบลอของเงา
+                                offset: Offset(0, 3), // ตำแหน่งของเงา
+                              )
+                            ]),
                         child: Center(
                             child: Text(
                           "SIGN IN",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24.0,
+                              fontSize: 24,
                               fontWeight: FontWeight.bold),
                         )),
                       ),
@@ -184,14 +179,15 @@ class _LogInState extends State<LogIn> {
                           "Don't have account?",
                           style: TextStyle(
                               color: Color.fromARGB(255, 11, 52, 96),
-                              fontSize: 17.0,
+                              fontSize: 17,
                               fontWeight: FontWeight.w500),
                         ),
                       ],
                     ),
                     GestureDetector(
                       onTap: () {
-                     Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => SignUp()));
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -200,7 +196,7 @@ class _LogInState extends State<LogIn> {
                             "Sign up",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 11, 52, 96),
-                                fontSize: 22.0,
+                                fontSize: 22,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],

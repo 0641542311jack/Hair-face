@@ -12,7 +12,7 @@ class _HairState extends State<Hair> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 4, 118, 149),
+      backgroundColor: Color.fromARGB(255, 50, 83, 125),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(top: 40, left: 20, right: 20),

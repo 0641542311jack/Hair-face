@@ -87,7 +87,7 @@ class _SignUpState extends State<SignUp> {
                 "Create Your\nAccount",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 32.0,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -196,7 +196,15 @@ class _SignUpState extends State<SignUp> {
                               Color.fromARGB(255, 11, 52, 96),
                             ]),
                             borderRadius:
-                                BorderRadius.circular(30)), //ความโค้งปุ่ม
+                                BorderRadius.circular(30),
+                                boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.7), // สีของเงา
+                              spreadRadius: 2, // การกระจายของเงา
+                              blurRadius: 6, // การเบลอของเงา
+                              offset: Offset(0, 3), // ตำแหน่งของเงา
+                            )
+                          ]), //ความโค้งปุ่ม
                         child: Center(
                             child: Text(
                           "SIGN UP",
