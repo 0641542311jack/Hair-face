@@ -1,8 +1,8 @@
-
 import 'package:barberapp/pages/booking.dart';
 import 'package:barberapp/pages/booking_user.dart';
 import 'package:barberapp/pages/hair.dart';
 import 'package:barberapp/pages/myface.dart';
+import 'package:barberapp/pages/viewmap.dart';
 import 'package:barberapp/services/shared_pref.dart';
 import 'package:flutter/material.dart';
 
@@ -300,7 +300,7 @@ class _HomeState extends State<Home> {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  Bookinf_User(service: 'Hair Washing')));
+                                  Booking_User(service: 'ข้อมูลการจอง')));
                     },
                     child: Container(
                       height: 130,
@@ -341,38 +341,47 @@ class _HomeState extends State<Home> {
                 SizedBox(width: 20),
                 Flexible(
                   fit: FlexFit.tight,
-                  child: Container(
-                    height: 130,
-                    width: 150,
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 50, 83, 125),
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.6), // สีของเงา
-                            spreadRadius: 5, // การกระจายของเงา
-                            blurRadius: 20, // การเบลอของเงา
-                            offset: Offset(0, 3), // ตำแหน่งของเงา
-                          )
-                        ]),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          "images/map.png",
-                          height: 80,
-                          width: 80,
-                          fit: BoxFit.cover,
-                        ),
-                        SizedBox(height: 1),
-                        Text(
-                          "เส้นทางร้าน",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  ViewMap(service: 'แผนที่')));
+                    },
+                    child: Container(
+                      height: 130,
+                      width: 150,
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 50, 83, 125),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.6), // สีของเงา
+                              spreadRadius: 5, // การกระจายของเงา
+                              blurRadius: 20, // การเบลอของเงา
+                              offset: Offset(0, 3), // ตำแหน่งของเงา
+                            )
+                          ]),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "images/map.png",
+                            height: 80,
+                            width: 80,
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(height: 1),
+                          Text(
+                            "เส้นทางร้าน",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

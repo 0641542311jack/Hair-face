@@ -2,15 +2,15 @@ import 'package:barberapp/services/database.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class Bookinf_User extends StatefulWidget {
+class Booking_User extends StatefulWidget {
   String service;
-  Bookinf_User({required this.service});
+  Booking_User({required this.service});
 
   @override
-  State<Bookinf_User> createState() => _Bookinf_UserState();
+  State<Booking_User> createState() => _Bookinf_UserState();
 }
 
-class _Bookinf_UserState extends State<Bookinf_User> {
+class _Bookinf_UserState extends State<Booking_User> {
   Stream? BookingStream;
 
   getontheload() async {
