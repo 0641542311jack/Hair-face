@@ -347,7 +347,7 @@ class _HomeState extends State<Home> {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  ViewMap(service: 'แผนที่')));
+                                  MapSample(service: 'แผนที่')));
                     },
                     child: Container(
                       height: 130,
